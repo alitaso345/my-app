@@ -1,17 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-class App extends React.Component {
-  render() {
-    return (
-      <div className="app">
-        hello
-      </div>
-    );
-  }
+function Example() {
+  const [count, setCount] = useState(0)
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+    </div>
+  )
 }
 
 ReactDOM.render(
-  <App />,
+  <Example />,
   document.getElementById('root')
 );
